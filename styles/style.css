@@ -1,0 +1,45 @@
+html { /*changing font*/
+    font-size: 15px; /* px means "pixels": the base font size is now 10 pixels high  */
+    font-family: 'Indie Flower', cursive; /* this should be the rest of the output you got from Google fonts */
+  }
+
+  h1 {
+    font-size: 60px;
+    text-align: center;
+  }
+  
+  p, li, a {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    color: white;
+    
+  }
+
+  /*changing color*/
+  html {
+    background-color: #5CCBBC;
+  }
+
+  /*styling the body*/
+  body {
+    width: 850px;
+    margin: 0px auto 30px auto;
+    background-color: #275DF1;
+    padding: 0px 20px 20px 20px;
+    border: 5px solid black;
+  }
+
+  /*styling the header*/
+  h1 {
+    margin: 0;
+    padding: 20px 0;
+    color: #5CCBBC;
+    text-shadow: 3px 3px 2px black;
+  }
+
+  /*centering the image*/
+  img {
+    display: block;
+    margin: 0 auto;
+  }
