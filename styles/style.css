@@ -1,5 +1,5 @@
 html { /*changing font*/
-    font-size: 15px; /* px means "pixels": the base font size is now 10 pixels high  */
+    font-size: 12px; /* px means "pixels": the base font size is now 10 pixels high  */
     font-family: 'Indie Flower', cursive; /* this should be the rest of the output you got from Google fonts */
   }
 
@@ -7,9 +7,19 @@ html { /*changing font*/
     font-size: 60px;
     text-align: center;
   }
+
+  h2{
+    font-size: 40px;
+    color:white;
+  }
+
+  h3{
+    font-size: 20px;
+    color:white;
+  }
   
-  p, li, a {
-    font-size: 16px;
+  p, li, a, label {
+    font-size: 15px;
     line-height: 1.5;
     letter-spacing: 1px;
     color: white;
