@@ -5,44 +5,69 @@
     <title>My test page</title>
     <link href="styles/style.css" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Limelight&display=swap" rel="stylesheet">
   </head>
   <body>
-    <h1>My Face</h1>
-    <a href="https://www.merriam-webster.com/dictionary/sexy" target="_blank"> <img src="images/me-small.jpg" alt="Me"> </a>
-    <h2>ME</h2>
+    <main>
+    <h1 id="h1">My Face</h1>
+
+    <nav id="navbar">
+      <ul>
+        <li><a href="#">sexy</a></li>
+        <li><a href="#">hot</a></li>
+        <li><a href="#">seductive</a></li>
+
+      </ul>
+    </nav>
+
+    <div class="make-moon">
+    </div>
+
+    <div class="make-heart">
+    </div>
+
+    
+    
+
+    <a href="https://www.merriam-webster.com/dictionary/sexy" target="_blank"> <img src="images/me-small.jpg" class="thick-teal-border" alt="Me"> </a> <!--to apply two classes do class="class1 class2"-->
+    <h2>ME</h2> <!--using css class-->
     <div>
-    <p>Table of Contents</p>
+    <p id="table-of-contents" class="teal-background"> <strong> <u><em><s>Table of Contents</s></em></u></strong></p> <!--strong tag to make it bold (font-weight:bold), u tag to underline(text-decorate:underline), em tag to italicize(font-style:italic), s tag for line-thrugh(text-decorate:line-through)-->
     <ul>
       <li> <a href="#smexy-face">Smexy Face</a> </li> <!--internal links-->
       <li> <a href="#origins">Origins</a> </li>
       <li> <a href="#phrases">Phrases</a> </li>
       <li> <a href="#shao-industries">Shao Industries</a> </li>
       <li> <a href="#rating">Rating</a> </li>
-
-
     </ul>
-  </div>
 
-    <h3 id=smexy-face>My smexy face:</h3>
+  </div>
+  </main>
+
+  <hr> <!--puts a line as a divider-->
+    <h3 class="striped-background" id=smexy-face>My smexy face:</h3>
     <p>My smexy ass face is of full Taiwanese decent, the purest bloodline of the recent century.
       My angles and jawlines are sharp enough to cut through the toughest wills
       who pretend not to dig me
     </p>
     <p>Check out <a href="https://www.instagram.com/tommy.shao3/">My irresistible presence</a></p>
 
-    <h3 id=origins>Origins of smexy ass kingmamba shieeeee name:</h3>
+    <hr>
+    <h3 class="teal-background" id=origins>Origins of smexy ass kingmamba shieeeee name:</h3>
     <p>Origins of this mouth-watering nickname came in an eureka momment in math class
       during senior year. It was true enlightenment.
     </p>
 
-    <h3 id=phrases>Ming-shattering phrases:</h3>
+    <hr>
+    <h3 class="teal-background" id=phrases>Mind-shattering phrases:</h3>
     <p>Dicc in da hand</p>
     <p>Bobs ur uncle</p>
     <p>Wakey wakey eggs and bakey</p>
     <p>potato potatoe we're both in a shit ton of trouble</p>
     <p>Disclaimer: these phrases are copyrighted by Shao Industries</p>
 
-    <h3 id=shao-industries>Shao Industries Brotherhood:</h3>
+    <hr>
+    <h3 class="teal-background" id=shao-industries>Shao Industries Brotherhood:</h3>
     <ul>
         <li>hot</li>
         <li>diligent</li>
@@ -52,11 +77,12 @@
     </ul>
     <p>lads shafting each other</p>
 
-    <h3 id=rating>Rating</h3>
+    <hr>
+    <h3 class="teal-background" id=rating>Rating</h3>
 
-    <form action="#"> <!--# is for dead link-->
+    <form id="form" action="#"> <!--# is for dead link-->
 
-      <p>pick as many as you like rah rah</p>
+      <p>pick as many as you like rah rah:</p>
       <br>
       <label for="drool-at-gainz">
         <input id="drool-at-gainz" value="drool-at-gainz" type="checkbox" name="desires">Drool at my gainz
@@ -72,7 +98,7 @@
 
       <br>
 
-      <p>choose or despair</p>
+      <p>choose or despair:</p>
       <br>
       <label for="0">
         <input id="0" value="0" type="radio" name="number-rate"> 0
@@ -104,7 +130,7 @@
       <label for="9">
         <input id="9" value="8" type="radio" name="number-rate"> 9
       </label>
-      <label for="10">
+      <label id= "10-rating" for="10">
         <input id="10" value="8" type="radio" name="number-rate" checked> 10
       </label>
 

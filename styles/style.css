@@ -4,52 +4,307 @@ html { /*changing font*/
   }
 
   h1 {
-    font-size: 60px;
+    font-size: 70px;
     text-align: center;
+    font-family: 'Limelight', cursive; /*will us the cursive font if limelight isn't available*/
+    opacity: 10;
+    text-transform: uppercase;
+    margin: 10px 20px;
+    padding: 20px 0;
+    color: #CCFFFF;
+    text-shadow: 3px 3px 2px #B39F7D;
+
+
+
+    
   }
+
+ 
 
   h2{
     font-size: 40px;
-    color:white;
+    color: #0E22B3;
+    transform: scale(1.5); /*scales the element to 1.5 it's size*/
+
+    position:relative; /*set element position to relative, then can do changes*/
+    top: -10px; /*also have left, right, bottom, these say how many px, % or em to move item away from it's normal position*/
+    left: 250px;
+
   }
 
-  h3{
+  h3, #table-of-contents{
     font-size: 20px;
-    color:white;
+    color:#0E22B3;
+    padding: 10px 30px 10px 30px;
+    margin: 10px -15px;
+    text-align: center;
+    width: 400px;
+    margin:auto;
+    height: 50pxpx;
+    box-shadow: 5px 10px 20px rgba(0,0,0,0.3), 5px 6px 6px rgba(200,0,0,0.3); /*box shadow: x y blur-radius color, can do multiple shadows separate with comma*/
+
+    transform: skewX(10deg);
+    transform: skewY(2deg);
   }
   
   p, li, a, label {
     font-size: 15px;
-    line-height: 1.5;
+    line-height: 25px;
     letter-spacing: 1px;
-    color: white;
+    color: #0E22B3;
+    margin: 15px;
+    text-align: justify;
+
     
+  }
+
+  /*
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  ul{
+    float:right;
+  }
+  */
+
+  a:hover{ /*pseudo class, changes state of element when hover, the link changes color when i hover over it*/
+    color:red;
   }
 
   /*changing color*/
   html {
-    background-color: #5CCBBC;
+    background-color: #FFA62E;
+    background:url(https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/rm31-jj-07-g-concrete_2.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=1ccaad332c064fb0856a810aa4af6b7d);
   }
 
   /*styling the body*/
   body {
-    width: 850px;
+    width: 900px;
     margin: 0px auto 30px auto;
-    background-color: #275DF1;
+    /*background-color: rgba(204, 255, 255, 0.4); uses rgba where last place controls opacity*/
+    background: linear-gradient(-45deg, rgba(204, 255, 255, 1), rgba(255, 220, 217, 1), rgba(255, 232, 191, 1));
     padding: 0px 20px 20px 20px;
     border: 5px solid black;
   }
 
-  /*styling the header*/
-  h1 {
-    margin: 0;
-    padding: 20px 0;
-    color: #5CCBBC;
-    text-shadow: 3px 3px 2px black;
-  }
+  
 
   /*centering the image*/
   img {
     display: block;
-    margin: 0 auto;
+    margin: auto;
+    opacity: 1;
   }
+
+  img:hover{
+    animation-name: widen-pic;
+    animation-duration: 500ms;
+  }
+
+  @keyframes widen-pic {
+    100%{
+      transform: scale(1.1);
+    }
+    
+  }
+
+  /*css class*/
+  .red-text{
+    color: #FF007F;
+    font-weight:900;
+  }
+
+  :root{ /*declare global variables inside :root, if declare inside a selector it can only be used within that selector*/
+    --test:#3BFFDB;
+  }
+  
+
+  .thick-teal-border{
+    border-color: #3BFFDB;
+    border-width: 10px;
+    border-style:double;
+    border-radius: 20%; /*this is for smoothing out corners*/
+    
+  }
+
+  @media (max-width: 1200px){ /*media query, if browser window is less than 1200px the varialbe will turn red*/
+    :root{
+      --test:red;
+    }
+  }
+
+  .teal-background{
+    background-color: var(--test, red); /*adding a fallback value red, will be red if the variable doesn't work*/
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+    
+  }
+
+  .striped-background{
+    background:repeating-linear-gradient(90deg, #CCFFFF 0px, #FFDCD9 40px, #FFE8BF 80px);
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 10px;
+  }
+
+  /*id selector*/
+  #form{
+    background-color: #FFA62E;
+
+    
+  }
+
+  /*attribute selector*/
+  [type='checkbox']{
+    margin: 20px;
+  }
+
+
+
+  #navbar{
+    background-color: #FFA62E;
+    margin: 0px -20px;
+
+    z-index: 2; /*z index makes the nav bar be on top if have overlap*/
+
+    width:940px;
+
+    position:fixed; 
+    top:0px;
+    left:auto;
+    right:auto;
+  }
+
+  nav ul{ /*select nav tag's ul*/
+    list-style-type: none; /*removes bullets*/
+    margin: 0px;
+    padding: 0px;
+  }
+
+  nav li{
+    display: inline;
+    margin-right: 30px;
+  }
+
+  button{
+    color:#0E22B3;
+    background-color: #3BFFDB;
+  }
+
+  button:hover{
+    animation-name: button-color;
+    animation-duration: 500ms;
+  }
+
+  @keyframes button-color {
+    100%{
+      background-color: #FFDCD9;
+    }
+  }
+
+  .make-moon{
+    position: absolute;
+    margin:0px;
+    top:110px;
+    bottom:0px;
+    left:500px;
+    right:0px;
+    width:100px;
+    height:100px;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: 25px 10px 0 0 #CCFFFF;
+  }
+
+  .make-heart{
+    position: absolute;
+    margin: auto;
+    top: -650px;
+    right: 0;
+    bottom: 0;
+    left: 600px;
+    background-color: red;
+    height: 50px;
+    width: 50px;
+    transform: rotate(-45deg);
+  }
+
+  .make-heart::after{ /*the before and after pseudo-element adds something before or after the element selected*/
+    background-color: red;
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 0px;
+    left: 25px;
+  }
+
+  .make-heart::before{
+    content: "";
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: -25px;
+    left: 0px;
+  }
+
+  /*animation*/
+  #h1{
+    animation-name: change-color;
+    animation-duration: 6s;
+  }
+
+  @keyframes change-color {
+    0%{
+      color:#B3A2A1;
+    }
+    50%{
+      color:#FFDCD9;
+    }
+    100%{
+      color:#FFE8BF;
+    }
+    
+  }
+
+  /* float
+  #left{
+    float:left;
+    width:400px;
+  }
+
+  #right{
+    float:right;
+    width:400px;
+  }
+  */
+  
+  
+/*
+text-transform: sets appearance of text(uppercase, lowercase, capitalize...)
+
+position: absolute; position relative to it's parent element(parent must have a position:relative)
+position: relative; position normal
+position: fixed; position relative to the browser, won't move when scroll
+
+Color 
+
+hsl(hue, saturation, lightness)
+
+Hue is what people generally think of as 'color'. If you picture a spectrum of colors starting with red on the left, moving through green in the middle, and blue on right, the hue is where a color fits along this line. In hsl(), hue uses a color wheel concept instead of the spectrum, where the angle of the color on the circle is given as a value between 0 and 360.
+
+Saturation is the amount of gray in a color. A fully saturated color has no gray in it, and a minimally saturated color is almost completely gray. This is given as a percentage with 100% being fully saturated.
+
+Lightness is the amount of white or black in a color. A percentage is given ranging from 0% (black) to 100% (white), where 50% is the normal color.
+
+
+*/
+  
