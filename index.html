@@ -8,10 +8,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Limelight&display=swap" rel="stylesheet">
   </head>
   <body>
-    <main>
-    <h1 id="h1">My Face</h1>
+    <main> <!--main tag used for main content of a page-->
+      <!-- <div> - groups content, <section> - groups related content, <article> - groups independent, self-contained content 
+        
+        The next HTML5 element that adds semantic meaning and improves accessibility is the header tag. It's used to wrap introductory 
+        information or navigation links for its parent tag and works well around content that's repeated at the top on multiple pages.
+        The header is meant for use in the body tag of your HTML document. It is different than the head element, which contains the page's title, meta information, etc.
 
-    <nav id="navbar">
+      -->
+    
+    <header>  <h1 id="h1">My Face</h1> </header>
+
+    <nav id="navbar"> <!-- nav is meant to wrap around the main navigation links in your page.-->
       <ul>
         <li><a href="#">sexy</a></li>
         <li><a href="#">hot</a></li>
@@ -20,7 +28,18 @@
       </ul>
     </nav>
 
+    <div class="star-1 stars"></div>
+    <div class="star-2 stars"></div>
+
+    <div class="balls" id="red"></div>
+    <div class="balls" id="blue"></div>
+    <div class="balls" id="green"></div>
+
     <div class="make-moon">
+    </div>
+
+    <div class="heart-background">
+
     </div>
 
     <div class="make-heart">
@@ -28,9 +47,23 @@
 
     
     
-
+    <figure>
     <a href="https://www.merriam-webster.com/dictionary/sexy" target="_blank"> <img src="images/me-small.jpg" class="thick-teal-border" alt="Me"> </a> <!--to apply two classes do class="class1 class2"-->
-    <h2>ME</h2> <!--using css class-->
+    <br>
+    <figcaption>
+      This is my smexy face ya feel
+    </figcaption>
+
+    <!--HTML5 introduced the figure element and the related figcaption. Used together, these items wrap a visual 
+      representation (like an image, diagram, or chart) along with its caption. Wrapping these elements together 
+      gives a two-fold accessibility boost by semantically grouping related content and providing a text alternative explaining the figure.-->
+
+  </figure>
+    <audio controls>
+      <source src="audio/Etude 2, Tommy Shao.mp3" type="audio/mpeg">
+    </audio>
+    
+    <h2 class="move-animation">ME</h2> <!--using css class-->
     <div>
     <p id="table-of-contents" class="teal-background"> <strong> <u><em><s>Table of Contents</s></em></u></strong></p> <!--strong tag to make it bold (font-weight:bold), u tag to underline(text-decorate:underline), em tag to italicize(font-style:italic), s tag for line-thrugh(text-decorate:line-through)-->
     <ul>
@@ -50,7 +83,9 @@
       My angles and jawlines are sharp enough to cut through the toughest wills
       who pretend not to dig me
     </p>
-    <p>Check out <a href="https://www.instagram.com/tommy.shao3/">My irresistible presence</a></p>
+    <p>Check out <a href="https://www.instagram.com/tommy.shao3/" accesskey="k">My irresistible presence</a></p> <!--accesskey attribute to specify a shortcut key to activate or bring 
+      focus to an element. Adding an accesskey attribute can make navigation more efficient for keyboard-only users. HTML5 allows this attribute to be used on any element, 
+      but it's particularly useful when it's used with interactive ones. This includes links, buttons, and form controls.-->
 
     <hr>
     <h3 class="teal-background" id=origins>Origins of smexy ass kingmamba shieeeee name:</h3>
@@ -82,23 +117,36 @@
 
     <form id="form" action="#"> <!--# is for dead link-->
 
-      <p>pick as many as you like rah rah:</p>
+      <fieldset>
+      <legend tabindex="0">pick as many as you like rah rah:</legend>
+      <!--The fieldset tag surrounds the entire grouping of radio buttons to achieve this. 
+        It often uses a legend tag to provide a description for the grouping, which screen 
+        readers read for each choice in the fieldset element.-->
+
+      <!--The HTML tabindex attribute has three distinct functions relating to an element's keyboard focus. Is for keyboard users
+        When it's on a tag, it indicates that the element can be focused on. The value (an integer that's positive, negative, or zero) determines the behavior.
+        Certain elements, such as links and form controls, automatically receive keyboard focus when a user tabs through a page. It's in the same order as 
+        the elements come in the HTML source markup. This same functionality can be given to other elements, such as div, span, and p, by placing a tabindex="0" attribute on them-->
       <br>
-      <label for="drool-at-gainz">
+      <label for="drool-at-gainz"> <!--The for attribute on a label tag explicitly associates that label with the form control and is used by screen readers.-->
         <input id="drool-at-gainz" value="drool-at-gainz" type="checkbox" name="desires">Drool at my gainz
       </label>
 
-      <label for="caress-gainz">
-        <input id="caress-gainz" value="caress-gainz" type="checkbox" name="desires"> Caress my shredded gainz
-      </label>
+      
+      <input id="caress-gainz" value="caress-gainz" type="checkbox" name="desires">
+      <label for="caress-gainz">Caress my shredded gainz</label>
+      <!--this also works, make sure the for attribute matches the id value of the input-->
 
       <label for="hubby">
         <input id="hubby" value="hubby" type="checkbox" name="desires"> Hubby me up
       </label>
 
+    </fieldset>
+
       <br>
 
-      <p>choose or despair:</p>
+      <fieldset>
+      <legend tabindex="0">choose or despair:</legend>
       <br>
       <label for="0">
         <input id="0" value="0" type="radio" name="number-rate"> 0
@@ -134,17 +182,65 @@
         <input id="10" value="8" type="radio" name="number-rate" checked> 10
       </label>
 
+    </fieldset>
+
       <br>
 
       <input type="text" placeholder="guilty confessions" required> <!--required: requires user to enter a text before sumitting-->
       <button id=confess type="submit">Confess</button>
+
+      <label for="pick-date">Go on a date rah rah! <time datetime="2021-06-30"> I'm free June 30th </time>:</label>
+      <input type="date" id="pick-date" name="date" required> <!--type date of input, is a calendar-->
+      <button type="submit">Pick</button>
       
     </form>
     <br>
     
 
-    <button id=change-user>Change user</button>
+
+    <button id=cange-user>Change user</button>
     <script src="scripts/main.js"></script>
+
+    <br>
+    <br>
+
+    <div id="flex-container">
+     
+      <div id="box-1">
+        <p id="flex-left">strengths</p>
+      </div>
+      <div id="box-2">
+        <p id="flex-right">weaknesses</p>
+      </div>
+
+    </div>
+
+    <div class="container">
+      <div class="d1">1</div>
+      <div class="d2">king</div>
+      <div class="d3">mamba</div>
+      <div class="d4">4</div>
+      <div class="d5">5</div>
+      <div class="d6">6</div>
+    </div>
+
+    <br>
+
+    <div class="container2">
+      <div class="item1">header</div>
+      <div class="item2">advert</div>
+      <div class="item3">
+        <div class="itemOne">paragraph1</div>
+        <div class="itemTwo">paragraph2</div>
+      </div>
+      <div class="item4">footer</div>
+    </div>
+
+
+    <footer> <!--footer primarily used to contain copyright information or links to related documents that usually sit at the bottom of a page.-->
+      <p>Copyright Shao Industries @2001-2021</p>
+
+    </footer>
 
   </body>
 </html> 
